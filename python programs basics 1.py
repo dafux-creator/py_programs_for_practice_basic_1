@@ -211,9 +211,28 @@ print(f"The sum of the series upto {n} terms, each term divided by {x} is: {add}
 
 
 #PATTERNS
+'''
+1.
+* 
+* *
+* * *
+* * * *
+* * * * *
+'''
 rows = 5
 for i in range(1, rows+1):
     print("* "*i)
+
+
+'''
+2.
+P
+Py
+Pyt
+Pyth
+Pytho
+Python
+'''
 
 string = "Python"
 j = 0
@@ -222,11 +241,29 @@ for i in range(1, 7):
         print(string[j], end="")
     print()
 
+'''
+3.
+1 2 3 4 5 
+2 3 4 5
+3 4 5
+4 5
+5
+'''
+
 i, j, rows = 0, 0, 5
 for i in range(1, rows+1):
     for j in range(1, 7-i):
         print(j+i-1, end = " ")
     print()
+
+'''
+4.
+5 4 3 2 1 
+4 3 2 1
+3 2 1
+2 1
+1
+'''
 
 i, j, rows = 0, 0, 5
 for i in range(rows, 0, -1):
@@ -234,16 +271,43 @@ for i in range(rows, 0, -1):
         print(j, end = " ")
     print()
 
+'''
+5.
+1
+33
+555
+7777
+99999
+'''
+
 i, rows, j = 0, 5, 1
 for i in range(1, rows+1):
     print(str(j)*i)
     j += 2
+
+'''
+6.
+A 
+A B
+A B C
+A B C D
+A B C D E
+'''
 
 i, j, asciVal, rows = 0, 0, 65, 5
 for i in range(1, rows+1):
     for j in range(i):
         print(chr(asciVal+j), end = " ")
     print()
+
+'''
+7.
+    A 
+   A B
+  A B C
+ A B C D
+A B C D E
+'''
 
 i, j, asciVal, rows = 0, 0, 65, 5
 wSpace = 4
@@ -254,6 +318,16 @@ for i in range(1, rows+1):
     wSpace -= 1
     print()
     
+
+'''
+8.
+AAAAA
+BBBBB
+CCCCC
+DDDDD
+EEEEE
+'''
+
 rows = 5
 asciVal = 65
 i = 0
@@ -261,12 +335,34 @@ i = 0
 for i in range(1, rows+1):
     print(chr(64+i)*5)
 
+'''
+9.
+    * 
+   * *
+  * * *
+ * * * *
+* * * * *
+'''
+
 wSpace, i, j, rows = 4, 0, 0, 5
 for i in range(1, rows+1):
     print(" "*wSpace, end = "")
     wSpace -= 1
     print("* "*i)
 
+
+'''
+9.
+         *
+
+       * A *
+
+     * A * A *
+
+   * A * A * A *
+
+ * A * A * A * A *
+'''
 
 i = 0
 rows = 5
