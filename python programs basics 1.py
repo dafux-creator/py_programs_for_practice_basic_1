@@ -452,3 +452,80 @@ for i in range(1, n+1):
 
 print("smallest number is:", min(num))
 print("largest number is:", max(num))
+
+#19.	Write a program to input a list of numbers and swap elements at the even location with the elements at the odd location.
+
+n = int(input("How many members in the list?"))
+l = []
+for i in range(1,n+1):
+    l.append(int(input(f"Enter member {i}: ")))
+print("current list:", l)
+
+for i in range(len(l)):
+    if i % 2 == 1: #i is odd
+        l[i], l[i - 1] = l[i - 1], l[i]
+print("new swapped list:", l)
+
+#21.	Write a program to read a list of n integers (positive as well as negative). Create two new lists, one having all positive numbers and the other having all negative numbers from the given list. Print all three lists
+
+n = int(input("How many members in the list?"))
+l = []
+for i in range(1,n+1):
+    l.append(int(input(f"Enter member {i}: ")))
+print("current list:", l)
+pos = []
+neg = []
+for element in l:
+    if element > 0:
+        pos.append(element)
+    elif element < 0:
+        neg.append(element)
+
+print(l, pos, neg)
+
+#22.	Write a program that asks for the (i) position (ii) value of the element to be deleted from the list and deletes it.
+
+n = int(input("How many members in the list?"))
+l = []
+for i in range(1,n+1):
+    l.append((input(f"Enter member {i}: ")))
+print("current list:", l)
+
+pos = int(input("Position of element to be deleted: "))
+
+l.pop(pos)
+print(l)
+val = input("Value of element to be deleted: ")
+
+l.remove(val)
+print(l)
+
+#23.	Write a program to enter names of employees and their salaries as input and store them in a dictionary
+
+db = dict()
+
+n = int(input("How many employees: "))
+
+for i in range(n):
+    name = input(f"Name of employee {i+1}: ")
+    db[name] = float(input(f"Salary of employee {i+1}: "))
+print(db)
+
+#24.	Write a program to create a dictionary with the roll number, name and marks of n students in a class and display  the names of students who have marks above 75.
+
+db = dict()
+
+n = int(input("How many students: "))
+tmpList = []
+for i in range(n):
+    rollNo = int(input(f"Roll number of student {i+1}: "))
+    tmpList.append(str(input(f"Name of student {i+1}: ")))
+    tmpList.append(float(input(f"Marks obtained by student {i+1}: ")))
+
+    db[rollNo] = tmpList
+    tmpList = []
+print(db)
+
+for key in db.keys():
+    if db[key][1] > 75:
+        print(db[key][0], " has marks above 75!")
